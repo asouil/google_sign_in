@@ -7,8 +7,8 @@ if (!isset($_SESSION["user"])) {
 }
 
 // declarer la variable $userMail
-$userMail = $_SESSION["mail"]; 
-
+$userMail = $_SESSION["user"]["email"]; 
+//var_dump($userMail);
 include 'header.php';
 ?>
 <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">

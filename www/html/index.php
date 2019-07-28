@@ -28,7 +28,6 @@ $auth=$client->createAuthUrl();
 // obtenir le code d'authentification
 
 $code = isset($_GET['code']) ? $_GET['code'] : NULL ;
-
 // obtenir le token d'accès
 
 if(isset($code)) {
@@ -41,7 +40,7 @@ if(isset($code)) {
         echo $e->getMessage();
     }
     try {
-        $_SESSION['user']= $client->verifyIdToken($token);
+        $_SESSION['user']= $client->verifyIdToken();
     } 
     catch (Exception $e){
         echo $e->getMessage();
